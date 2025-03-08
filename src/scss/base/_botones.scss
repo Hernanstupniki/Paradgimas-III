@@ -9,3 +9,9 @@
 .boton-verde {
     @include boton($verde, inline-block);
 }
+
+.botones-crear {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}

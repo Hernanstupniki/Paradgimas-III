@@ -9,4 +9,8 @@
         </div>
 
         <p class="copyright">Bienes Raices &copy; <?php echo date("Y"); ?> </p>
+
+        
+    <script src="/build/js/bundle.min.js"></script>
+    </body>
     </footer>
