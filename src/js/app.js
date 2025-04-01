@@ -76,3 +76,12 @@ function getValueCookie() {
         /^(?:.*;)?\s*dark-mode\s*=\s*([^;]+)(?:.*)?$/
     ) || [, null])[1];
 }
+
+function propiedadSuccess() {
+    const propiedadExito = true; // Simulando que la propiedad fue creada con éxito
+
+    if (propiedadExito) {
+        // Aquí se simula la interacción con una variable PHP
+        $exito = "propiedad creada correctamente";
+    }
+}

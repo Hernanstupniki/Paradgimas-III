@@ -8,4 +8,13 @@
         text-align: center;
         margin: 1rem;
     }
+    &.success {
+        background-color: $verde;
+        padding: .5rem;
+        text-transform: uppercase;
+        color: $blanco;
+        font-weight: $bold;
+        text-align: center;
+        margin: 1rem;
+    }
 }
