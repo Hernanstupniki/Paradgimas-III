@@ -26,12 +26,50 @@ table.propiedades {
 
   thead {
     background-color: $verde;
-        th {
-            color: $blanco;
-            padding: 2rem;
-        }
+
+    th {
+      color: $blanco;
+      padding: 2rem;
+      text-align: center;          // títulos centrados
     }
-    .image-table {
+  }
+
+  tbody {
+    td {
+      padding: 1.2rem;
+      text-align: center;          // centra por defecto todas las celdas
+      vertical-align: middle;      // alinea verticalmente
+    }
+
+    td:nth-child(2) {              // columna "Título"
+      text-align: left;            // solo el título a la izquierda
+    }
+
+    td:nth-child(3) img {          // columna "Imagen"
+      display: block;
+      margin: 0 auto;              // centra la imagen
       width: 10rem;
     }
+
+    td:nth-child(5) {              // columna "Acciones"
+      /* centra los botones y apílalos con separación */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .8rem;
+
+      a {
+        width: 12rem;              // ancho fijo para que queden parejos
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+  .botones-crear {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
   }

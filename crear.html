@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrador de Bienes Raíces</title>
+    <link rel="stylesheet" href="/build/css/app.css?v=13">
+
+</head>
+<body>
+
+      <header class="header">
+    <div class="contenedor contenido-header">
+      <div class="barra">
+        <a href="/">
+          <img src="build/img/logo.svg" alt="Logotipo de Bienes Raíces">
+        </a>
+
+        <div class="mobile-menu">
+          <img src="build/img/barras.svg" alt="icono menú">
+        </div>
+
+        <div class="derecha">
+          <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="modo oscuro">
+          <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="anuncios.html">Anuncios</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="contenedor seccion">
+    <h1>Crear Propiedad</h1>
+
+    <!-- Mensajes de error (simulados) -->
+    <div class="alerta error" style="display:none;">Debes añadir un título</div>
+
+    <form class="formulario" method="POST" action="#" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Información General</legend>
+
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Título Propiedad" />
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" placeholder="Precio Propiedad" />
+
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen" />
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Describe la propiedad..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información Propiedad</legend>
+
+        <label for="habitaciones">Habitaciones:</label>
+        <input type="number" id="habitaciones" name="habitaciones" placeholder="Ej: 3" min="1" max="9" />
+
+        <label for="wc">Baños:</label>
+        <input type="number" id="wc" name="wc" placeholder="Ej: 2" min="1" max="9" />
+
+        <label for="estacionamiento">Estacionamiento:</label>
+        <input type="number" id="estacionamiento" name="estacionamiento" placeholder="Ej: 2" min="1" max="9" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Vendedor</legend>
+        <select name="vendedores_id">
+          <option value="">-- Seleccione --</option>
+          <option value="1">Juan Pérez</option>
+          <option value="2">María Gómez</option>
+          <option value="3">Carlos Rodríguez</option>
+        </select>
+      </fieldset>
+
+      <div class="botones-crear">
+        <a href="/admin.html" class="boton boton-verde">Volver</a>
+        <input type="submit" value="Crear Propiedad" class="boton boton-verde" onclick="alert('Propiedad creada correctamente')" />
+      </div>
+    </form>
+  </main>
+
+    <footer class="footer seccion">
+    <div class="contenedor contenedor-footer">
+      <nav class="navegacion">
+        <a href="index.html">Portada</a>
+        <a href="listado_tabla.html">Listado (Tabla)</a>
+        <a href="listado_box.html">Listado (Box)</a>
+        <a href="producto.html">Propiedad</a>
+        <a href="comprar.html">Contactar</a>
+      </nav>
+    </div>
+    <p class="copyright">Todos los derechos Reservados &copy; 2025</p>
+  </footer>
+
+  <script src="build/js/bundle.min.js"></script>
+
+</body>
+</html>
