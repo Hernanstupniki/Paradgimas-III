@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrador de Bienes Raíces</title>
+    <link rel="stylesheet" href="/build/css/app.css?v=13">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor contenido-header">
+      <div class="barra">
+        <a href="/">
+          <img src="build/img/logo.svg" alt="Logotipo de Bienes Raíces">
+        </a>
+
+        <div class="mobile-menu">
+          <img src="build/img/barras.svg" alt="icono menú">
+        </div>
+
+        <div class="derecha">
+          <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="modo oscuro">
+          <nav class="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="anuncios.html">Anuncios</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor seccion">
+    <h1>Administrador de Bienes Raíces</h1>
+
+
+    <a href="crear.html" class="boton boton-verde">Nueva Propiedad</a>
+
+    <table class="propiedades">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Imagen</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Casa moderna con pileta</td>
+          <td><img src="src/img/destacada.jpg" alt="Casa moderna con pileta" class="image-table"></td>
+          <td>$ 150,000</td>
+          <td>
+            <a href="#" class="boton-rojo-block">Eliminar</a>
+            <a href="#" class="boton-verde-block">Actualizar</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Departamento 3 ambientes</td>
+          <td><img src="src/img/destacada2.jpg" alt="Departamento 3 ambientes" class="image-table"></td>
+          <td>$ 98,000</td>
+          <td>
+            <a href="#" class="boton-rojo-block">Eliminar</a>
+            <a href="#" class="boton-verde-block">Actualizar</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Terreno en zona norte</td>
+          <td><img src="src/img/destacada3.jpg" alt="Terreno en zona norte" class="image-table"></td>
+          <td>$ 45,000</td>
+          <td>
+            <a href="#" class="boton-rojo-block">Eliminar</a>
+            <a href="#" class="boton-verde-block">Actualizar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer seccion">
+    <div class="contenedor contenedor-footer">
+      <nav class="navegacion">
+        <a href="index.html">Portada</a>
+        <a href="listado_tabla.html">Listado (Tabla)</a>
+        <a href="listado_box.html">Listado (Box)</a>
+        <a href="producto.html">Propiedad</a>
+        <a href="comprar.html">Contactar</a>
+      </nav>
+    </div>
+    <p class="copyright">Todos los derechos Reservados &copy; 2025</p>
+  </footer>
+
+  <script src="build/js/bundle.min.js"></script>
+</body>
+</html>
