@@ -45,40 +45,40 @@
 
         <h2>Llene el formulario de Contacto</h2>
 
-        <form class="formulario">
+        <!-- Se agregó id y name para usar el plugin jQuery Validation -->
+        <form id="form-contacto" class="formulario" novalidate>
             <fieldset>
                 <legend>Información Personal</legend>
 
                 <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Tu Nombre" id="nombre">
+                <input type="text" placeholder="Tu Nombre" id="nombre" name="nombre">
 
                 <label for="email">E-mail</label>
-                <input type="email" placeholder="Tu Email" id="email">
+                <input type="email" placeholder="Tu Email" id="email" name="email">
 
                 <label for="telefono">Teléfono</label>
-                <input type="tel" placeholder="Tu Teléfono" id="telefono">
+                <input type="tel" placeholder="Tu Teléfono" id="telefono" name="telefono">
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje"></textarea>
+                <textarea id="mensaje" name="mensaje"></textarea>
             </fieldset>
 
             <fieldset>
                 <legend>Información sobre la propiedad</legend>
 
                 <label for="opciones">Vende o Compra:</label>
-                <select id="opciones">
+                <select id="opciones" name="opciones">
                     <option value="" disabled selected>-- Seleccione --</option>
                     <option value="Compra">Compra</option>
                     <option value="Vende">Vende</option>
                 </select>
 
                 <label for="presupuesto">Precio o Presupuesto</label>
-                <input type="number" placeholder="Tu Precio o Presupuesto" id="presupuesto">
-
+                <input type="number" placeholder="Tu Precio o Presupuesto" id="presupuesto" name="presupuesto">
             </fieldset>
 
             <fieldset>
-                <legend>Información sobre la propiedad</legend>
+                <legend>Forma de contacto</legend>
 
                 <p>Como desea ser contactado</p>
 
@@ -93,11 +93,10 @@
                 <p>Si eligió teléfono, elija la fecha y la hora</p>
 
                 <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha">
+                <input type="date" id="fecha" name="fecha">
 
                 <label for="hora">Hora:</label>
-                <input type="time" id="hora" min="09:00" max="18:00">
-
+                <input type="time" id="hora" name="hora" min="09:00" max="18:00">
             </fieldset>
 
             <input type="submit" value="Enviar" class="boton-verde">
@@ -118,6 +117,50 @@
         <p class="copyright">Todos los derechos Reservados 2021 &copy;</p>
     </footer>
 
+    <!-- Plugin jQuery Validation agregado -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <!-- Inicialización del plugin -->
+    <script>
+    $(function() {
+        $("#form-contacto").validate({
+            rules: {
+                nombre: { required: true, minlength: 2 },
+                email: { required: true, email: true },
+                mensaje: { required: true, minlength: 10 }
+            },
+            messages: {
+                nombre: {
+                    required: "Por favor ingresá tu nombre",
+                    minlength: "Debe tener al menos 2 caracteres"
+                },
+                email: {
+                    required: "Por favor ingresá tu correo electrónico",
+                    email: "El formato del correo no es válido"
+                },
+                mensaje: {
+                    required: "Por favor escribí tu mensaje",
+                    minlength: "Debe tener al menos 10 caracteres"
+                }
+            },
+            errorElement: "span",
+            errorClass: "input-error",
+            highlight: function(element) {
+                $(element).addClass("is-invalid");
+            },
+            unhighlight: function(element) {
+                $(element).removeClass("is-invalid");
+            },
+            submitHandler: function(form) {
+                alert("Formulario enviado correctamente");
+                form.submit();
+            }
+        });
+    });
+    </script>
+
+    <!-- Script original del sitio -->
     <script src="build/js/bundle.min.js"></script>
 </body>
 </html>
