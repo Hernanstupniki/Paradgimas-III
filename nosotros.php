@@ -25,7 +25,7 @@
                 <p>
                     Aliquet augue dis purus convallis scelerisque aenean suscipit nulla pharetra, praesent nullam dictumst feugiat integer est quisque eleifend a pulvinar, sociosqu suspendisse class vestibulum risus gravida himenaeos non. Velit et vehicula venenatis cum eget, primis litora mattis orci morbi urna, per facilisi lacinia mus.
                 </p>
-
+            </div>
         </div>
     </main>
 

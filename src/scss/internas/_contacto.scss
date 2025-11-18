@@ -1,0 +1,49 @@
+/* ----------- CONTACTO ADMIN ----------- */
+
+.contacto-admin {
+    margin-top: 8rem;
+}
+
+/* Contenedor centrado */
+.tabla-contacto-admin {
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+}
+
+/* Neutralizamos cosas raras de .propiedades SOLO acá */
+.contacto-admin .propiedades-contacto {
+    width: 100%;
+    margin: 0 auto !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;      /* para que no se deforme por el mensaje largo */
+}
+
+/* Encabezado verde (por si no lo toma del global) */
+.contacto-admin .propiedades-contacto thead {
+    background-color: #7ab800;
+    color: #ffffff;
+}
+
+/* Celdas */
+.contacto-admin .propiedades-contacto th,
+.contacto-admin .propiedades-contacto td {
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+/* Columna Mensaje alineada a la izquierda y con salto de línea */
+.contacto-admin .propiedades-contacto th:nth-child(5),
+.contacto-admin .propiedades-contacto td:nth-child(5) {
+    text-align: left;
+    word-break: break-word;
+}
+
+/* Filas alternadas y hover suave */
+.contacto-admin .propiedades-contacto tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.contacto-admin .propiedades-contacto tbody tr:hover {
+    background-color: #e4f5c4;
+}

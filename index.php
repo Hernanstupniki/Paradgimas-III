@@ -181,7 +181,6 @@
             </div>
         </article>
     </section>
-
     
     <section class="testimoniales">
         <h3>Testimoniales</h3>
@@ -193,7 +192,6 @@
             <p>- Hernan Stupniki</p>
     </section>
 </div>
-
 <?php
     incluirTemplate ('footer');
 ?>

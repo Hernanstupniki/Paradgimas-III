@@ -1,3 +1,7 @@
+// ------------------------------
+// BOTONES GENERALES
+// ------------------------------
+
 .boton-amarillo {
     @include boton($amarillo, inline-block);
 }
@@ -10,8 +14,62 @@
     @include boton($verde, inline-block);
 }
 
+.boton-verde-block {
+    @include boton($verde, block);
+}
+
+.boton-rojo-block {
+    @include boton($rojo, block);
+}
+
+
+// ------------------------------
+// SOPORTE PARA BUTTON Y INPUT
+// (se verán idénticos a <a>)
+// ------------------------------
+
+button.boton-rojo-block,
+input.boton-rojo-block {
+    @include boton($rojo, block);
+    border: none;
+    cursor: pointer;
+}
+
+button.boton-verde-block,
+input.boton-verde-block {
+    @include boton($verde, block);
+    border: none;
+    cursor: pointer;
+}
+
+
+// ------------------------------
+// BOTONES PARA FORMULARIO CREAR
+// ------------------------------
+
 .botones-crear {
     display: flex;
     justify-content: space-between;
     text-align: center;
+}
+
+
+// ------------------------------
+// ESTILOS PARA BOTONES EN TABLA (Acciones)
+// ------------------------------
+
+.acciones {
+    width: 120px;
+    text-align: center;
+}
+
+.acciones form {
+    margin: 0;
+}
+
+button.boton-rojo-block,
+input.boton-rojo-block,
+button.boton-verde-block,
+input.boton-verde-block {
+    width: 100%;
 }
